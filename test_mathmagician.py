@@ -15,12 +15,12 @@ class Test_mathmagician(unittest.TestCase):
 	def test_print_fibonacci_returns_correct_sequence(self):
 		fib_digits = self.magician.generate_fibonacci(6)
 		self.assertEqual([0, 1, 1, 2, 3, 5], fib_digits)
-		# pass
+
 
 	def test_print_primes_returns_correct_sequence(self):
 		primes = self.magician.generate_primes(4)
 		self.assertEqual([2, 3, 5, 7], primes)
-		# pass
+
 
 
 if __name__ == '__main__':
