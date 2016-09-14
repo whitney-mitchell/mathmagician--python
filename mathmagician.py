@@ -11,9 +11,6 @@ class Mathmagician():
 		generate_fibonacci
 		generate_primes
 	"""
-	# def __init__(self):
-	# 	# menu = self.show_menu()
-	# 	pass
 
 	def show_menu(self):
 		print("Type the number of your chosen math-magic, or '4' to quit:")
@@ -33,17 +30,21 @@ class Mathmagician():
 				if choice == "1":
 					res_int = self.generate_integers(self.count)
 					self.print_results(res_int)
+					print("Done!")
 
 				if choice == "2":
 					res_fib = self.generate_fibonacci(self.count)
 					self.print_results(res_fib)
+					print("Done!")
 
 				if choice == "3":
 					res_primes = self.generate_primes(self.count)
 					self.print_results(res_primes)
+					print("Done!")
 
 				if choice != "4":
-					self.show_menu()
+					# self.show_menu()
+					self.quit()
 
 			else:
 		 		print("\nType 1, 2, 3, or 4. \n")
@@ -52,6 +53,7 @@ class Mathmagician():
 		#handles non-int input
 		except ValueError:
 		 	print("\nType 1, 2, 3, or 4. \n")
+		 	self.show_menu()
 
 	def print_results(self, res):
 		for r in res:
@@ -111,33 +113,4 @@ if __name__ == "__main__":
   magician = Mathmagician()
   magician.show_menu()
 
-  # def generate_primes(self, count):
-  #   i, x = 2, 1
-  #   result = list()
-
-  #   # x starts at 2 and ends at whatever the user typed in
-  #   # for number of numbers to display
-  #   while x <= count:
-
-  #     # Start by assuming it is a prime number
-  #     isPrime = True
-
-  #     # Using the range 2...(square root of current number)
-  #     for n in range(2, int(math.sqrt(i) + 1)):
-
-  #       # If there is not a remainder with modulo calculation
-  #       # then it's not a prime number
-  #       if i % n == 0:
-  #         isPrime = False
-  #         break
-
-  #     # Range loop is done, check if prime got negated
-  #     # If not then we know it's a prime number
-  #     if isPrime:
-  #       result.append(i)
-  #       x += 1
-
-  #     i += 1
-
-  #   return result
 
