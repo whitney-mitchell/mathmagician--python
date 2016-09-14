@@ -11,6 +11,13 @@ class Mathmagician():
 		generate_fibonacci
 		generate_primes
 	"""
+	def show_title(self):
+		print("######################")
+		print("######################")
+		print("##    MathMagic!    ##")
+		print("######################")
+		print("######################")
+		self.show_menu()
 
 	def show_menu(self):
 		print("Type the number of your chosen math-magic, or '4' to quit:")
@@ -43,8 +50,7 @@ class Mathmagician():
 					print("Done!")
 
 				if choice != "4":
-					# self.show_menu()
-					self.quit()
+					self.show_menu()
 
 			else:
 		 		print("\nType 1, 2, 3, or 4. \n")
@@ -111,6 +117,6 @@ class Mathmagician():
 
 if __name__ == "__main__":
   magician = Mathmagician()
-  magician.show_menu()
+  magician.show_title()
 
 
